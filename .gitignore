@@ -1,0 +1,4 @@
+# Ignore all .class files (compiled Java bytecode)
+*.class
+
+# Optionally, ignore build/ and out/ directories commonly used for compiled files
