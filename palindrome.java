@@ -28,6 +28,33 @@ class palindrome {
         return true;
     }
 
+    private static boolean is_int_palindrome(int n) {
+        StringBuilder s1 = new StringBuilder();
+        s1.append(n);
+
+        StringBuilder s2 = new StringBuilder();
+        s2.append(n);
+        s2 = s2.reverse();
+
+        return s1.toString().equals(s2.toString());
+    }
+
+    private static boolean is_int_palindrome2(int n) {
+        int res = 0;
+        int dummy = n;
+
+        while (dummy > 0) {
+            int r = dummy % 10;
+            res *= 10;
+            res += r;
+            dummy /= 10;
+        }
+
+        System.out.println("res: " + res);
+
+        return (res == n);
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter a string: ");
@@ -37,5 +64,9 @@ class palindrome {
         System.out.println("Is palindrome? (Using built-in method) " + isPalindrome(s));
 
         System.out.println("Is palindrome? (Using two-pointer method) " + is_palindrome(s));
+
+        System.out.println("Is palindrome? (Using integer method) " + is_int_palindrome(121));
+
+        System.out.println("Is palindrome? (Using integer method 2) " + is_int_palindrome2(121));
     }
 }
