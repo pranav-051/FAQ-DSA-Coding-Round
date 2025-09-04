@@ -1,3 +1,5 @@
+//Fibonnaci Series is a sequence of numbers where each number is sum of preceding 2 numbers. 
+//Series starts from 0 and 1. 
 
 public class fibonnaci {
 
