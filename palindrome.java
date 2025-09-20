@@ -1,6 +1,4 @@
-
 import java.util.Scanner;
-
 class palindrome {
 
     private static boolean isPalindrome(String s) {
@@ -8,10 +6,7 @@ class palindrome {
         s1.append(s);
         s1 = s1.reverse();
 
-        StringBuilder s2 = new StringBuilder();
-        s2.append(s);
-
-        return s1.toString().equals(s2.toString());
+        return s1.toString().equals(s);
     }
 
     private static boolean is_palindrome(String s) {
@@ -40,19 +35,19 @@ class palindrome {
     }
 
     private static boolean is_int_palindrome2(int n) {
-        int res = 0;
-        int dummy = n;
+        int original = n;
+        int reverse = 0;
 
-        while (dummy > 0) {
-            int r = dummy % 10;
-            res *= 10;
-            res += r;
-            dummy /= 10;
+        while (n > 0) {
+            int r = n % 10;
+            reverse = reverse * 10 + r;
+
+            n = n / 10;
         }
 
-        System.out.println("res: " + res);
+        System.out.println("Reverse: " + reverse);
 
-        return (res == n);
+        return (reverse == original);
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-
+// Fibonnaci series is a sequence of sum of 2 preciding numbers. 
 public class fibonnaci {
 
     public static int fib(int n) {

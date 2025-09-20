@@ -1,4 +1,4 @@
-
+//Arsmstrong number is  sum of product of each number multiplied by number of digits in a given number. Ex: 153 = 1^3 + 5^3 + 3^3 here 3 is number of digits in 153. Ex2: 9474 = 9^4 + 4^4 + 7^4 + 4^4 here 4 is number of digits in 9474.
 import java.util.Scanner;
 
 public class armstrong {
@@ -21,6 +21,6 @@ public class armstrong {
         int n = scan.nextInt();
 
         System.out.println("Entered number is armstrong number: " + isArmstrong(n));
-
+        scan.close();
     }
 }
